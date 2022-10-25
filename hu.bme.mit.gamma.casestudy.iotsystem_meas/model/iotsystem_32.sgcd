@@ -1,0 +1,121 @@
+package iotsystem
+import "camera_component.sgcd"
+import "edge_adapter.gcd"
+import "interfaces"
+import "traffic.sgcd"
+
+stochastic async IoTSystem [
+	port Failures : provides EventStream 
+]{
+	component camera1_ : CameraComponent
+	component camera2_ : CameraComponent
+	component camera3_ : CameraComponent
+	component camera4_ : CameraComponent
+	component camera5_ : CameraComponent
+	component camera6_ : CameraComponent
+	component camera7_ : CameraComponent
+	component camera8_ : CameraComponent
+	component camera9_ : CameraComponent
+	component camera10 : CameraComponent
+	component camera11 : CameraComponent
+	component camera12 : CameraComponent
+	component camera13 : CameraComponent
+	component camera14 : CameraComponent
+	component camera15 : CameraComponent
+	component camera16 : CameraComponent
+	component camera17 : CameraComponent
+	component camera18 : CameraComponent
+	component camera19 : CameraComponent
+	component camera20 : CameraComponent
+	component camera21 : CameraComponent
+	component camera22 : CameraComponent
+	component camera23 : CameraComponent
+	component camera24 : CameraComponent
+	component camera25 : CameraComponent
+	component camera26 : CameraComponent
+	component camera27 : CameraComponent
+	component camera28 : CameraComponent
+	component camera29 : CameraComponent
+	component camera30 : CameraComponent
+	component camera31 : CameraComponent
+	component camera32 : CameraComponent
+	
+	component edge : EdgeAdapter
+	component traffic : RoadTraffic
+	channel [traffic.Cars] -o)- [
+								 camera1_.TrafficSensing
+								,camera2_.TrafficSensing
+								,camera3_.TrafficSensing
+								,camera4_.TrafficSensing
+								,camera5_.TrafficSensing
+								,camera6_.TrafficSensing
+								,camera7_.TrafficSensing
+								,camera8_.TrafficSensing
+								,camera9_.TrafficSensing
+								,camera10.TrafficSensing
+								,camera11.TrafficSensing
+								,camera12.TrafficSensing
+								,camera13.TrafficSensing
+								,camera14.TrafficSensing
+								,camera15.TrafficSensing
+								,camera16.TrafficSensing
+								,camera17.TrafficSensing
+								,camera18.TrafficSensing
+								,camera19.TrafficSensing
+								,camera20.TrafficSensing
+								,camera21.TrafficSensing
+								,camera22.TrafficSensing
+								,camera23.TrafficSensing
+								,camera24.TrafficSensing
+								,camera25.TrafficSensing
+								,camera26.TrafficSensing
+								,camera27.TrafficSensing
+								,camera28.TrafficSensing
+								,camera29.TrafficSensing
+								,camera30.TrafficSensing
+								,camera31.TrafficSensing
+								,camera32.TrafficSensing
+								,edge.TrafficStream
+	]
+	channel [camera1_.Images] -o)- [edge.Camera]
+	channel [camera2_.Images] -o)- [edge.Camera]
+	channel [camera3_.Images] -o)- [edge.Camera]
+	channel [camera4_.Images] -o)- [edge.Camera]
+	channel [camera5_.Images] -o)- [edge.Camera]
+	channel [camera6_.Images] -o)- [edge.Camera]
+	channel [camera7_.Images] -o)- [edge.Camera]
+	channel [camera8_.Images] -o)- [edge.Camera]
+	channel [camera9_.Images] -o)- [edge.Camera]
+	channel [camera10.Images] -o)- [edge.Camera]
+	channel [camera11.Images] -o)- [edge.Camera]
+	channel [camera12.Images] -o)- [edge.Camera]
+	channel [camera13.Images] -o)- [edge.Camera]
+	channel [camera14.Images] -o)- [edge.Camera]
+	channel [camera15.Images] -o)- [edge.Camera]
+	channel [camera16.Images] -o)- [edge.Camera]
+	channel [camera17.Images] -o)- [edge.Camera]
+	channel [camera18.Images] -o)- [edge.Camera]
+	channel [camera19.Images] -o)- [edge.Camera]
+	channel [camera20.Images] -o)- [edge.Camera]
+	channel [camera21.Images] -o)- [edge.Camera]
+	channel [camera22.Images] -o)- [edge.Camera]
+	channel [camera23.Images] -o)- [edge.Camera]
+	channel [camera24.Images] -o)- [edge.Camera]
+	channel [camera25.Images] -o)- [edge.Camera]
+	channel [camera26.Images] -o)- [edge.Camera]
+	channel [camera27.Images] -o)- [edge.Camera]
+	channel [camera28.Images] -o)- [edge.Camera]
+	channel [camera29.Images] -o)- [edge.Camera]
+	channel [camera30.Images] -o)- [edge.Camera]
+	channel [camera31.Images] -o)- [edge.Camera]
+	channel [camera32.Images] -o)- [edge.Camera]
+	bind Failures -> edge.LostImage
+}
+
+analysis ServiceAvailability {
+	in stochastic component system : IoTSystem
+	probability of event [system]:Failures->newEvent;
+	@Configuration{
+		end event [system]:Failures->newEvent raised
+	}
+}

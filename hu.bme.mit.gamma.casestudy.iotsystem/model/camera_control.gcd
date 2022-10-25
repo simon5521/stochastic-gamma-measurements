@@ -1,0 +1,16 @@
+package camera_control
+import "interfaces"
+statechart CameraControl [
+	port Requests : provides EventStream
+	port DriverImages : requires ImageStream
+	port NetworkImages : provides ImageStream
+]{
+	transition from init to MainOperation / raise Requests.newEvent;
+	transition from MainOperation to MainOperation when cycle / raise Requests.newEvent;
+	transition from MainOperation to MainOperation when DriverImages.newData / 
+		raise NetworkImages.newData(DriverImages.newData::blurred,DriverImages.newData::car);
+	region main{
+		initial init
+		state MainOperation
+	}
+}

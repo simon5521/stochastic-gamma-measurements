@@ -1,0 +1,14 @@
+package gps
+import "interfaces.gcd"
+statechart GPS [
+	port Faults : requires HardwareFailure
+	port Communication : provides Sensor
+]{
+	transition from init to operation
+	transition from operation to failstop when Faults.failure /raise Communication.failstop;
+	region main {
+		initial init
+		state operation
+		state failstop
+	}
+}

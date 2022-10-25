@@ -1,0 +1,37 @@
+package orion_stoch_env
+
+import "Orion_Adapter"
+import "Interfaces"
+
+stochastic async Orion_Environment [
+	port SystemConnStatus : provides ConnectionState 
+]{
+	component orionSystem : Orion_Adapter
+	
+	periodic source TimerKeepAliveReceiveTimeout_3 port TimoeutKeepAliveReceiveTimeout_3  : provides SoftwareTimer {*.*:normal mean=5.0, scale=0.5;}
+	periodic source TimerKapcsolodik_2             port TimeoutKapcsolodik_2              : provides SoftwareTimer {*.*:normal mean=5.0, scale=0.5;}
+	periodic source TimerZarva_0                   port TimeoutZarva_0                    : provides SoftwareTimer {*.*:normal mean=5.0, scale=0.5;}
+	periodic source TimerKeepAliveSendTimeout_1    port TimeoutKeepAliveSendTimeout_1     : provides SoftwareTimer {*.*:normal mean=5.0, scale=0.5;}
+	periodic source TimerKeepAliveReceiveTimeout_4 port TimeoutKeepAliveReceiveTimeout_4  : provides SoftwareTimer {*.*:normal mean=5.0, scale=0.5;}
+	periodic source TimerKapcsolodik_3             port TimeoutKapcsolodik_3              : provides SoftwareTimer {*.*:normal mean=5.0, scale=0.5;}
+	periodic source TimerKeepAliveSendTimeout_0    port TimeoutKeepAliveSendTimeout_0     : provides SoftwareTimer {*.*:normal mean=5.0, scale=0.5;}
+	
+	channel [TimerKeepAliveReceiveTimeout_3.TimoeutKeepAliveReceiveTimeout_3] -o)- [orionSystem.TimoeutKeepAliveReceiveTimeout_3]
+	channel [TimerKapcsolodik_2            .TimeoutKapcsolodik_2            ] -o)- [orionSystem.TimeoutKapcsolodik_2            ]
+	channel [TimerZarva_0                  .TimeoutZarva_0                  ] -o)- [orionSystem.TimeoutZarva_0                  ]
+	channel [TimerKeepAliveSendTimeout_1   .TimeoutKeepAliveSendTimeout_1   ] -o)- [orionSystem.TimeoutKeepAliveSendTimeout_1   ]
+	channel [TimerKeepAliveReceiveTimeout_4.TimeoutKeepAliveReceiveTimeout_4] -o)- [orionSystem.TimeoutKeepAliveReceiveTimeout_4]
+	channel [TimerKapcsolodik_3            .TimeoutKapcsolodik_3            ] -o)- [orionSystem.TimeoutKapcsolodik_3            ]
+    channel [TimerKeepAliveSendTimeout_0   .TimeoutKeepAliveSendTimeout_0   ] -o)- [orionSystem.TimeoutKeepAliveSendTimeout_0   ]
+
+	bind SystemConnStatus ->orionSystem.SystemStatus
+	
+}
+
+analysis Orion_Performance {
+	in stochastic component orion : Orion_Environment 
+	mean time of event [orion]:SystemConnStatus->conn ;
+	@Configuration{
+		end event [orion]:SystemConnStatus->conn raised
+	}
+} 

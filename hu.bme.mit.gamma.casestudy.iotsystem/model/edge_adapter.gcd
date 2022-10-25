@@ -1,0 +1,8 @@
+package edge_adapter
+import "edge"
+adapter EdgeAdapter of component edge : Edge []{
+	when TrafficStream.any / run
+	when Camera.any / run
+	queue trafficQueue (priority=1,capacity=1){TrafficStream.any}
+	queue cameraQueue (priority=2,capacity=1){Camera.any}
+}

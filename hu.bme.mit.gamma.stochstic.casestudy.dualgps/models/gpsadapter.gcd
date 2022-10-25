@@ -1,0 +1,8 @@
+package gpsadapter
+import "gps"
+adapter GPSasync of component gps : GPS []{
+	when Faults.any / run
+	queue faultQueue (priority=1,capacity=3) {
+		Faults.any
+	}  
+}

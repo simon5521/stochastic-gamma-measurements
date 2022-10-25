@@ -1,0 +1,1773 @@
+<?xml version="1.0" encoding="ASCII"?>
+<hu.bme.mit.gamma.xsts:XSTS xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hu.bme.mit.gamma.expression="http://www.mit.bme.hu/gamma/expression/Model" xmlns:hu.bme.mit.gamma.xsts="http://www.mit.bme.hu/gamma/xSTS/Model" name="orion_master_sm" controlVariables="//@variableDeclarations.31 //@variableDeclarations.32 //@variableDeclarations.33">
+  <typeDeclarations name="Main_region_of_Orion_Master_SM">
+    <type xsi:type="hu.bme.mit.gamma.expression:EnumerationTypeDefinition">
+      <literals name="__Inactive__"/>
+      <literals name="Zarva_0"/>
+      <literals name="Kapcsolodik_2"/>
+      <literals name="Kapcsolodva_4"/>
+    </type>
+  </typeDeclarations>
+  <typeDeclarations name="Region_2_in_Kapcsolodva_4">
+    <type xsi:type="hu.bme.mit.gamma.expression:EnumerationTypeDefinition">
+      <literals name="__Inactive__"/>
+      <literals name="KeepAliveReceiveTimeout_3"/>
+    </type>
+  </typeDeclarations>
+  <typeDeclarations name="Region_1_in_Kapcsolodva_4">
+    <type xsi:type="hu.bme.mit.gamma.expression:EnumerationTypeDefinition">
+      <literals name="__Inactive__"/>
+      <literals name="KeepAliveSendTimeout_1"/>
+    </type>
+  </typeDeclarations>
+  <variableDeclarations name="StateMachine_Port_OrionDisconn_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Send_StateMachine_Port_OrionConnReq_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Send_StateMachine_Port_OrionAppData_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="StateMachine_Port_OrionKeepAlive_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Process_StateMachine_Port_OrionAppData_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Connection_Port_Operation_Call_Disconn_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="TimeoutKeepAliveSendTimeout_1_newEvent_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Connection_Port_Operation_Call_Connect_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Process_StateMachine_Port_OrionKeepAlive_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Block_Port_Operation_Call_Invalid_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="StateMachine_Port_OrionConnReq_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Send_StateMachine_Port_OrionDisconnCause_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Status_disconn_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Process_StateMachine_Port_OrionDisconn_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="TimeoutKapcsolodik_2_newEvent_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Process_StateMachine_Port_OrionDisconnCause_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="TimoeutKeepAliveReceiveTimeout_3_newEvent_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Process_StateMachine_Port_OrionConnConf_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Process_StateMachine_Port_OrionConnReq_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Send_StateMachine_Port_OrionConnConf_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="StateMachine_Port_OrionConnResp_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Send_StateMachine_Port_OrionConnResp_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="StateMachine_Port_OrionAppData_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Block_Port_Operation_Call_SendData_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Send_StateMachine_Port_OrionKeepAlive_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="StateMachine_Port_OrionConnConf_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Send_StateMachine_Port_OrionDisconn_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Status_conn_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="TimeoutZarva_0_newEvent_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="Process_StateMachine_Port_OrionConnResp_Out">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="StateMachine_Port_OrionDisconnCause_In">
+    <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+  </variableDeclarations>
+  <variableDeclarations name="main_region_of_Orion_Master_SM">
+    <type xsi:type="hu.bme.mit.gamma.expression:TypeReference" reference="//@typeDeclarations.0"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.0"/>
+  </variableDeclarations>
+  <variableDeclarations name="region_2_in_Kapcsolodva_4">
+    <type xsi:type="hu.bme.mit.gamma.expression:TypeReference" reference="//@typeDeclarations.1"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.0"/>
+  </variableDeclarations>
+  <variableDeclarations name="region_1_in_Kapcsolodva_4">
+    <type xsi:type="hu.bme.mit.gamma.expression:TypeReference" reference="//@typeDeclarations.2"/>
+    <expression xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.0"/>
+  </variableDeclarations>
+  <variableGroups variables="//@variableDeclarations.0 //@variableDeclarations.3 //@variableDeclarations.5 //@variableDeclarations.6 //@variableDeclarations.7 //@variableDeclarations.9 //@variableDeclarations.10 //@variableDeclarations.14 //@variableDeclarations.16 //@variableDeclarations.20 //@variableDeclarations.22 //@variableDeclarations.23 //@variableDeclarations.25 //@variableDeclarations.28 //@variableDeclarations.30">
+    <annotation xsi:type="hu.bme.mit.gamma.xsts:InEventGroup"/>
+  </variableGroups>
+  <variableGroups variables="//@variableDeclarations.1 //@variableDeclarations.2 //@variableDeclarations.4 //@variableDeclarations.8 //@variableDeclarations.11 //@variableDeclarations.12 //@variableDeclarations.13 //@variableDeclarations.15 //@variableDeclarations.17 //@variableDeclarations.18 //@variableDeclarations.19 //@variableDeclarations.21 //@variableDeclarations.24 //@variableDeclarations.26 //@variableDeclarations.27 //@variableDeclarations.29">
+    <annotation xsi:type="hu.bme.mit.gamma.xsts:OutEventGroup"/>
+  </variableGroups>
+  <variableGroups containedGroups="//@variableGroups.3" variables="//@variableDeclarations.31">
+    <annotation xsi:type="hu.bme.mit.gamma.xsts:RegionGroup"/>
+  </variableGroups>
+  <variableGroups parentGroup="//@variableGroups.2" variables="//@variableDeclarations.32 //@variableDeclarations.33">
+    <annotation xsi:type="hu.bme.mit.gamma.xsts:RegionGroup"/>
+  </variableGroups>
+  <variableGroups>
+    <annotation xsi:type="hu.bme.mit.gamma.xsts:ComponentParameterGroup"/>
+  </variableGroups>
+  <variableInitializingTransition>
+    <action xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.0"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.0"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.33"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.0"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.0"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.3"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.5"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.6"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.7"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.9"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.10"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.14"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.16"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.20"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.22"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.23"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.25"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.28"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.30"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.1"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.2"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.4"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.8"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.11"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.12"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.13"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.15"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.17"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.18"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.19"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.21"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.24"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.26"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.27"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.29"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+    </action>
+  </variableInitializingTransition>
+  <configurationInitializingTransition>
+    <action xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+      <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+      <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+    </action>
+  </configurationInitializingTransition>
+  <entryEventTransition>
+    <action xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+        <assumption xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+          <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+          <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+        </assumption>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+        <assumption xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+          <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+          <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.2"/>
+        </assumption>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+          <assumption xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+            <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+            <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+          </assumption>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.27"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+      </actions>
+    </action>
+  </entryEventTransition>
+  <transitions>
+    <action xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+      <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_2049568740">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+              <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.2"/>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_633456758">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+              <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_205351251">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+              <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.33"/>
+              <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.1"/>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_1830187398">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+              <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_1672663753">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+              <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+              <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.1"/>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_987062864">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+              <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.2/@variableDeclaration"/>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_1102806013">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+              <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.4/@variableDeclaration"/>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_744089068">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+              <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.4/@variableDeclaration"/>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_687118764">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+              <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.2/@variableDeclaration"/>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_1308753220">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+              <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.4/@variableDeclaration"/>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_1481183066">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.3/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:OrExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.28"/>
+                </operands>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.10/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.1"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.2"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.10/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_82118538">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.3/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.7"/>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.12/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.1"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.2"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.12/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_179139180">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.0/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.2"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.20"/>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.14/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.19"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.33"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.1"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.1"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.27"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.14/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_880665620">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.0/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.2"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:OrExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.14"/>
+                </operands>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.16/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.26"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.16/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_41598027">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.0/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.2"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.30"/>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.18/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.18/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_548357123">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.0/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.2"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.9"/>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.20/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.26"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.20/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_1118414337">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.0/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.2"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.25"/>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.22/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.26"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.22/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_126136522">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.0/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.2"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.3"/>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.24/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.26"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.24/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_317908756">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.0/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.2"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.22"/>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.26/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.26"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.26/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_1985983379">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.0/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.2"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.10"/>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.28/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.26"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.28/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_2003804404">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.5"/>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.30/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.12"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.33"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.0"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.0"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.26"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.30/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_724107546">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.10"/>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.32/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.12"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.33"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.0"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.0"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.26"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.32/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_1334151757">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.30"/>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.34/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.12"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.33"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.0"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.0"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.34/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_1919026883">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.9"/>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.36/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.12"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.33"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.0"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.0"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.26"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.36/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_766063103">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.20"/>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.38/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.12"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.33"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.0"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.0"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.26"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.38/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_1037534185">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.25"/>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.40/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.12"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.33"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.0"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.0"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.26"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.40/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_754318676">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.5/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                      <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                      <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+                    </operands>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                      <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.33"/>
+                      <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.1"/>
+                    </operands>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:OrExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.6"/>
+                </operands>
+              </operands>
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.5"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.10"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.30"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.9"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.20"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.25"/>
+                  </operand>
+                </operands>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.42/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.24"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.33"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.42/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_919095851">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.8/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                      <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                      <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+                    </operands>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                      <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.33"/>
+                      <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.1"/>
+                    </operands>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.23"/>
+              </operands>
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.5"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.10"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.30"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.9"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.20"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.25"/>
+                  </operand>
+                </operands>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.44/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.2"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.33"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.44/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_591385723">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.7/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                      <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                      <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+                    </operands>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                      <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+                      <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.1"/>
+                    </operands>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:OrExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.16"/>
+                </operands>
+              </operands>
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.5"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.10"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.30"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.9"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.20"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.25"/>
+                  </operand>
+                </operands>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.46/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+              <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+                <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+                  <assumption xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+                  </assumption>
+                </actions>
+                <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+                  <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.12"/>
+                  <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+                </actions>
+              </actions>
+              <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+                <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                    <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                    <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+                  </operand>
+                </assumption>
+              </actions>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.33"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.2/@type/@literals.0"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.0"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.26"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.46/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_482448868">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.6/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                      <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                      <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+                    </operands>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                      <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+                      <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.1"/>
+                    </operands>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.22"/>
+              </operands>
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.5"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.10"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.30"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.9"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.20"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.25"/>
+                  </operand>
+                </operands>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.48/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.4"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.48/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:VariableDeclarationAction">
+          <variableDeclaration name="_guard_1379101776">
+            <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+            <expression xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                  <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.9/@variableDeclaration"/>
+                  <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                      <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.31"/>
+                      <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.0/@type/@literals.3"/>
+                    </operands>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:EqualityExpression">
+                      <leftOperand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+                      <rightOperand xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.1"/>
+                    </operands>
+                  </operands>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.3"/>
+              </operands>
+              <operands xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.5"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.10"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.30"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.9"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.20"/>
+                  </operand>
+                </operands>
+                <operands xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+                  <operand xsi:type="hu.bme.mit.gamma.expression:AndExpression">
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.1/@variableDeclaration"/>
+                    <operands xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.25"/>
+                  </operand>
+                </operands>
+              </operands>
+            </expression>
+          </variableDeclaration>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+          <actions xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+              <assumption xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.50/@variableDeclaration"/>
+            </actions>
+            <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+              <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.32"/>
+              <rhs xsi:type="hu.bme.mit.gamma.expression:EnumerationLiteralExpression" reference="//@typeDeclarations.1/@type/@literals.1"/>
+            </actions>
+          </actions>
+          <actions xsi:type="hu.bme.mit.gamma.xsts:AssumeAction">
+            <assumption xsi:type="hu.bme.mit.gamma.expression:NotExpression">
+              <operand xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@transitions.0/@action/@actions.0/@actions.50/@variableDeclaration"/>
+            </assumption>
+          </actions>
+        </actions>
+      </actions>
+    </action>
+  </transitions>
+  <inEventTransition>
+    <action xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.22"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.22"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.28"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.28"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.25"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.25"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.6"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.6"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.30"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.30"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.9"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.9"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.5"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.5"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.7"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.7"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.16"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.16"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.0"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.0"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.14"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.14"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.3"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.3"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.10"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.10"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.23"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.23"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:NonDeterministicAction">
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.20"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.20"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+        </actions>
+      </actions>
+    </action>
+  </inEventTransition>
+  <outEventTransition>
+    <action xsi:type="hu.bme.mit.gamma.xsts:SequentialAction">
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.26"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.12"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.13"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.11"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.24"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.29"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.27"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.4"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.1"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.2"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.18"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.8"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.15"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.19"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.17"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+      <actions xsi:type="hu.bme.mit.gamma.xsts:AssignmentAction">
+        <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@variableDeclarations.21"/>
+        <rhs xsi:type="hu.bme.mit.gamma.expression:FalseExpression"/>
+      </actions>
+    </action>
+  </outEventTransition>
+</hu.bme.mit.gamma.xsts:XSTS>

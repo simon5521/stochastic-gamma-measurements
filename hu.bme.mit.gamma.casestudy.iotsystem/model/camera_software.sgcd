@@ -1,0 +1,20 @@
+package camera_software
+import "camera_driver"
+import "camera_control"
+import "interfaces"
+stochastic cascade CameraSoftware [
+	port TrafficSensing : requires TrafficEventStream
+	port Images : provides ImageStream
+]{
+	execute cameraControl,cameraControl,cameraControl,cameraDriver,cameraDriver,cameraDriver,cameraControl,cameraControl,cameraControl
+	component cameraDriver : CameraDriver
+	component cameraControl : CameraControl
+	sample imageBlur port ImageIn : requires ImageStream -> port ImageOut : provides ImageStream {
+		ImageOut.* : bernoulli prob=0.1;
+	}
+	channel [cameraControl.Requests] -o)- [cameraDriver.Requests]
+	channel [cameraDriver.Images] -o)- [imageBlur.ImageIn]
+	channel [imageBlur.ImageOut] -o)- [cameraControl.DriverImages]
+	bind Images -> cameraControl.NetworkImages
+	bind TrafficSensing -> cameraDriver.Traffic
+}

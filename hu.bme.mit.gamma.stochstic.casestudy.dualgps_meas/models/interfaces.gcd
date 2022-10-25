@@ -1,0 +1,8 @@
+package interfaces
+interface Sensor {
+	out event failstop
+}
+
+interface HardwareFailure {
+	out event failure
+}

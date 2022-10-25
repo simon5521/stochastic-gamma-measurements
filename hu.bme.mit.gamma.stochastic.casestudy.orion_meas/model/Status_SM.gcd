@@ -1,0 +1,22 @@
+package status_sm
+import "Interfaces"
+statechart Status_SM [
+	port slaveStatus : requires ConnectionState
+	port masterStatus : requires ConnectionState
+	port systemStatus : provides ConnectionState
+]{
+	transition from init to no_conn
+	transition from no_conn to master_conn when masterStatus.conn
+	transition from master_conn to no_conn when masterStatus.disconn
+	transition from no_conn to slave_conn when slaveStatus.conn
+	transition from slave_conn to no_conn when slaveStatus.disconn
+	transition from master_conn to system_conn when slaveStatus.conn / raise systemStatus.conn;
+	transition from slave_conn to system_conn when masterStatus.conn / raise systemStatus.conn;
+	region main{
+		initial init
+		state no_conn
+		state master_conn
+		state slave_conn
+		state system_conn
+	}
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ASCII"?>
+<hu.bme.mit.gamma.statechart.lowlevel:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hu.bme.mit.gamma.action="http://www.mit.bme.hu/gamma/action/Model" xmlns:hu.bme.mit.gamma.expression="http://www.mit.bme.hu/gamma/expression/Model" xmlns:hu.bme.mit.gamma.statechart.lowlevel="http://www.mit.bme.hu/gamma/statechart/lowlevel/Model" name="traffic_sct">
+  <components xsi:type="hu.bme.mit.gamma.statechart.lowlevel:StatechartDefinition" name="TrafficStatechart">
+    <eventDeclarations name="CarArrives_newEvent_In">
+      <isRaised name="isRaised">
+        <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      </isRaised>
+    </eventDeclarations>
+    <eventDeclarations name="CarLeaves_newEvent_In">
+      <isRaised name="isRaised">
+        <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      </isRaised>
+    </eventDeclarations>
+    <eventDeclarations name="CarArrivesOut_newEvent_Out" direction="OUT">
+      <isRaised name="isRaised">
+        <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      </isRaised>
+    </eventDeclarations>
+    <eventDeclarations name="TrafficStream_carArrives_Out" direction="OUT">
+      <isRaised name="isRaised">
+        <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      </isRaised>
+    </eventDeclarations>
+    <eventDeclarations name="TrafficStream_carLeaves_Out" direction="OUT">
+      <isRaised name="isRaised">
+        <type xsi:type="hu.bme.mit.gamma.expression:BooleanTypeDefinition"/>
+      </isRaised>
+    </eventDeclarations>
+    <regions name="main">
+      <stateNodes xsi:type="hu.bme.mit.gamma.statechart.lowlevel:State" name="car" outgoingTransitions="//@components.0/@transitions.2" incomingTransitions="//@components.0/@transitions.1">
+        <entryAction xsi:type="hu.bme.mit.gamma.action:EmptyStatement"/>
+        <exitAction xsi:type="hu.bme.mit.gamma.action:EmptyStatement"/>
+      </stateNodes>
+      <stateNodes xsi:type="hu.bme.mit.gamma.statechart.lowlevel:State" name="nocar" outgoingTransitions="//@components.0/@transitions.1" incomingTransitions="//@components.0/@transitions.0 //@components.0/@transitions.2">
+        <entryAction xsi:type="hu.bme.mit.gamma.action:EmptyStatement"/>
+        <exitAction xsi:type="hu.bme.mit.gamma.action:EmptyStatement"/>
+      </stateNodes>
+      <stateNodes xsi:type="hu.bme.mit.gamma.statechart.lowlevel:InitialState" name="init" outgoingTransitions="//@components.0/@transitions.0"/>
+    </regions>
+    <transitions source="//@components.0/@regions.0/@stateNodes.2" target="//@components.0/@regions.0/@stateNodes.1">
+      <action xsi:type="hu.bme.mit.gamma.action:EmptyStatement"/>
+    </transitions>
+    <transitions source="//@components.0/@regions.0/@stateNodes.1" target="//@components.0/@regions.0/@stateNodes.0">
+      <guard xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.0/@eventDeclarations.0/@isRaised"/>
+      <action xsi:type="hu.bme.mit.gamma.action:Block">
+        <actions xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.0/@eventDeclarations.3/@isRaised"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+        <actions xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.0/@eventDeclarations.2/@isRaised"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+      </action>
+    </transitions>
+    <transitions source="//@components.0/@regions.0/@stateNodes.0" target="//@components.0/@regions.0/@stateNodes.1">
+      <guard xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.0/@eventDeclarations.1/@isRaised"/>
+      <action xsi:type="hu.bme.mit.gamma.action:Block">
+        <actions xsi:type="hu.bme.mit.gamma.action:AssignmentStatement">
+          <lhs xsi:type="hu.bme.mit.gamma.expression:DirectReferenceExpression" declaration="//@components.0/@eventDeclarations.4/@isRaised"/>
+          <rhs xsi:type="hu.bme.mit.gamma.expression:TrueExpression"/>
+        </actions>
+      </action>
+    </transitions>
+  </components>
+</hu.bme.mit.gamma.statechart.lowlevel:Package>

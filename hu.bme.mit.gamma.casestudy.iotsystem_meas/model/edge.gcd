@@ -1,0 +1,27 @@
+package cloud
+import "interfaces"
+statechart Edge[
+	port Camera : requires ImageStream
+	port TrafficStream : requires TrafficEventStream
+	port LostImage : provides EventStream
+]{ 
+	
+	var isblurred:decimal
+	
+	region main {
+		initial start 
+		state WaitingForCars
+		state NotRecognized
+		state RecognizedByCamera
+		choice BlurryChoice
+	}
+	
+	transition from start to WaitingForCars
+	transition from WaitingForCars to NotRecognized when TrafficStream.carArrives
+	transition from NotRecognized to BlurryChoice when Camera.newData / isblurred:=Camera.newData::blurred;
+	transition from BlurryChoice to RecognizedByCamera [Camera.newData::blurred==0.0]
+	transition from BlurryChoice to NotRecognized [else]
+	transition from RecognizedByCamera to WaitingForCars  when TrafficStream.carLeaves
+	transition from NotRecognized to WaitingForCars  when TrafficStream.carLeaves / raise LostImage.newEvent;
+	 
+}

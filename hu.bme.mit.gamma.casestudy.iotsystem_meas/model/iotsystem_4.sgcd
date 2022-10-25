@@ -1,0 +1,37 @@
+package iotsystem
+import "camera_component.sgcd"
+import "edge_adapter.gcd"
+import "interfaces"
+import "traffic.sgcd"
+
+stochastic async IoTSystem [
+	port Failures : provides EventStream 
+]{
+	component camera1 : CameraComponent
+	component camera2 : CameraComponent
+	component camera3 : CameraComponent
+	component camera4 : CameraComponent
+	
+	component edge : EdgeAdapter
+	component traffic : RoadTraffic
+	channel [traffic.Cars] -o)- [
+								 camera1.TrafficSensing
+								,camera2.TrafficSensing
+								,camera3.TrafficSensing
+								,camera4.TrafficSensing
+								,edge.TrafficStream
+	]
+	channel [camera1.Images] -o)- [edge.Camera]
+	channel [camera2.Images] -o)- [edge.Camera]
+	channel [camera3.Images] -o)- [edge.Camera]
+	channel [camera4.Images] -o)- [edge.Camera]
+	bind Failures -> edge.LostImage
+}
+
+analysis ServiceAvailability {
+	in stochastic component system : IoTSystem
+	probability of event [system]:Failures->newEvent;
+	@Configuration{
+		end event [system]:Failures->newEvent raised
+	}
+}

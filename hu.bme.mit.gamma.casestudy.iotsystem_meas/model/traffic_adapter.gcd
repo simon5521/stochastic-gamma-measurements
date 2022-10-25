@@ -1,0 +1,9 @@
+package traffic_adapter
+import "traffic_sct"
+adapter TrafficAdapter of component trafficAdapter : TrafficStatechart [
+]{
+	when CarArrives.any / run
+	when CarLeaves.any / run
+	queue arriveQueue (priority=1,capacity=1){CarArrives.any}
+	queue leaveQueue (priority=1,capacity=1){CarLeaves.any}
+}

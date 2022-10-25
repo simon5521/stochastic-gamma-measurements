@@ -1,0 +1,24 @@
+package camera_component
+import "camera_adapter"
+import "interfaces"
+import "network_adapter"
+stochastic async CameraComponent [
+	port TrafficSensing : requires TrafficEventStream
+	port Images : provides ImageStream
+]{
+	periodic source softwareTimer port events : provides EventStream{
+		*.*: normal mean = 0.2 , scale = 0.05;
+	}
+	switch networkLoss port ImageIn : requires ImageStream -> port ImageOut : provides ImageStream,
+															port LostImages: provides ImageStream{
+																ImageOut.* : 0.9;
+																LostImages.* : 0.1;}
+	component software : CameraAdapter
+	component networkQueue : NetworkAdapter
+	channel [softwareTimer.events] -o)- [software.SoftwareTimer]
+	channel [software.Images] -o)- [networkLoss.ImageIn]
+	channel [networkLoss.ImageOut] -o)- [networkQueue.ImageIn]
+	channel [networkLoss.LostImages] -o)- [networkQueue.ImageLoss]
+	bind TrafficSensing -> software.TrafficSensing
+	bind Images -> networkQueue.ImageOut
+}

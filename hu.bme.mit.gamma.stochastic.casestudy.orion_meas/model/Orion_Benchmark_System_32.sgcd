@@ -1,0 +1,33 @@
+package orion_benchmark_system
+import "orion_stoch_env"
+import "interfaces"
+stochastic async OrionBenchMarkSystem [
+	port SystemConnStatus : provides ConnectionState 
+]
+{
+	component subSystem1_ : Orion_Environment
+	component subSystem2_ : Orion_Environment
+	component subSystem3_ : Orion_Environment
+	component subSystem4_ : Orion_Environment
+	component subSystem5_ : Orion_Environment
+	component subSystem6_ : Orion_Environment
+	component subSystem7_ : Orion_Environment
+	component subSystem8_ : Orion_Environment
+	component subSystem9_ : Orion_Environment
+	component subSystem10 : Orion_Environment
+	component subSystem11 : Orion_Environment
+	component subSystem12 : Orion_Environment
+	component subSystem13 : Orion_Environment
+	component subSystem14 : Orion_Environment
+	component subSystem15 : Orion_Environment
+	component subSystem16 : Orion_Environment
+	bind SystemConnStatus->subSystem1_.SystemConnStatus
+}
+
+analysis Orion_Performance {
+	in stochastic component orion : OrionBenchMarkSystem 
+	mean time of event [orion]:SystemConnStatus->conn ;
+	@Configuration{
+		end event [orion]:SystemConnStatus->conn raised
+	}
+} 

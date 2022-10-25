@@ -1,0 +1,19 @@
+//Source: https://github.com/ftsrg/gamma/blob/6a3ce22f527543b521f48cbc28e2842f2eb91af9/examples/hu.bme.mit.gamma.industrial.protocol.casestudy/model/Sync/SystemIdealChannel/OrionSystem.gcd
+package orion_system
+
+import "Orion_Master_SM"
+import "Orion_Slave_SM"
+import "Channel"
+
+sync OrionSystem [
+] {
+	component master : Orion_Master_SM
+	component masterSlaveChannel : ChannelStatechart
+	component slave : Orion_Slave_SM
+	component slaveMasterChannel : ChannelStatechart
+	
+	channel [master.Send_StateMachine_Port] -o)- [masterSlaveChannel.Input]
+	channel [masterSlaveChannel.Output] -o)- [slave.StateMachine_Port]
+	channel [slave.Send_StateMachine_Port] -o)- [slaveMasterChannel.Input]
+	channel [slaveMasterChannel.Output] -o)- [master.StateMachine_Port]
+}

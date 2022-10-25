@@ -1,0 +1,24 @@
+package orion_master_adapter
+import "Interfaces"
+import "Orion_Stoch_System.sgcd"
+adapter Orion_Adapter of component master : OrionStochSystem []{ 
+	
+	when  TimoeutKeepAliveReceiveTimeout_3.any/ run
+	when  TimeoutKapcsolodik_2            .any/ run
+	when  TimeoutZarva_0                  .any/ run
+	when  TimeoutKeepAliveSendTimeout_1   .any/ run
+	                                      
+	when  TimeoutKeepAliveReceiveTimeout_4.any/ run
+	when  TimeoutKapcsolodik_3            .any/ run
+ 	when  TimeoutKeepAliveSendTimeout_0   .any/ run
+ 	
+ 	queue queueOfTimoeutKeepAliveReceiveTimeout_3(priority=1,capacity=1){TimoeutKeepAliveReceiveTimeout_3.any}
+ 	queue queueOfTimeoutKapcsolodik_2            (priority=1,capacity=1){TimeoutKapcsolodik_2            .any}
+ 	queue queueOfTimeoutZarva_0                  (priority=1,capacity=1){TimeoutZarva_0                  .any}
+ 	queue queueOfTimeoutKeepAliveSendTimeout_1   (priority=1,capacity=1){TimeoutKeepAliveSendTimeout_1   .any}
+
+ 	queue queueOfTimeoutKeepAliveReceiveTimeout_4(priority=1,capacity=1){TimeoutKeepAliveReceiveTimeout_4.any}
+ 	queue queueOfTimeoutKapcsolodik_3            (priority=1,capacity=1){TimeoutKapcsolodik_3            .any}
+ 	queue queueOfTimeoutKeepAliveSendTimeout_0   (priority=1,capacity=1){TimeoutKeepAliveSendTimeout_0   .any}
+ 	
+}

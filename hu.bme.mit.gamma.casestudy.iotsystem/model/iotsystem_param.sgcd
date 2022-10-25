@@ -1,0 +1,28 @@
+package iotsystem_param
+import "camera_component.sgcd"
+import "edge_adapter.gcd"
+import "interfaces"
+import "traffic_param.sgcd"
+
+stochastic async IoTSystemParametric (delayMean:decimal) [
+	port Failures : provides EventStream 
+	port CarLeave : provides EventStream
+]{
+	component camera1 : CameraComponent
+	component camera2 : CameraComponent
+	component edge : EdgeAdapter
+	component traffic : RoadTrafficParametric(delayMean)
+	channel [traffic.Cars] -o)- [camera1.TrafficSensing,camera2.TrafficSensing,edge.TrafficStream]
+	channel [camera1.Images] -o)- [edge.Camera]
+	channel [camera2.Images] -o)- [edge.Camera]
+	bind Failures -> edge.LostImage
+	bind CarLeave -> edge.CarLeave
+}
+
+analysis ServiceAvailability {
+	in stochastic component system : IoTSystemParametric(sample(uniform from=0.1, to=1.0))
+	probability of event [system]:Failures->newEvent;
+	@Configuration{
+		end event [system]:CarLeave->newEvent raised
+	}
+}

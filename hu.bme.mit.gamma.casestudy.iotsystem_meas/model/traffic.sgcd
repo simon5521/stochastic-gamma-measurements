@@ -1,0 +1,18 @@
+package traffic
+import "interfaces"
+import "traffic_adapter"
+stochastic async RoadTraffic [
+	port Cars : provides TrafficEventStream
+]{
+	component trafficSct : TrafficAdapter
+	delay carDelay port CarIn : requires EventStream -> port CarOut : provides EventStream {
+		CarOut.* : normal mean = 0.3 , scale = 0.1; 
+	}
+	periodic source carArrival port Cars : provides EventStream {
+		Cars.* : exponential rate=2.5;
+	}
+	channel [carArrival.Cars] -o)- [trafficSct.CarArrives]
+	channel [carDelay.CarOut] -o)- [trafficSct.CarLeaves]
+	channel [trafficSct.CarArrivesOut] -o)- [carDelay.CarIn]
+	bind Cars-> trafficSct.TrafficStream
+}

@@ -1,0 +1,41 @@
+package dualgps
+import "interfaces.gcd"
+import "gpsadapter.gcd"
+import "voteradapter.gcd"
+
+
+stochastic async DualGPS [
+	port Communication : provides Sensor
+]{
+	component GPS1 : GPSasync
+	component GPS2 : GPSasync
+	component Voter : Voterasync
+	
+	source GPS1_Failure port Faults : provides HardwareFailure {
+		Faults.* : exponential rate=10.0;
+	}
+	source GPS2_Failure port Faults : provides HardwareFailure {
+		Faults.* : exponential rate=10.0;
+	}
+	source Voter_Failure port Faults : provides HardwareFailure {
+		Faults.* : exponential rate=20.0;
+	}
+	
+	bind Communication -> Voter.Communication
+	
+	channel [GPS1_Failure.Faults] -o)- [GPS1.Faults]
+	channel [GPS1.Communication] -o)- [Voter.Sensor1] 
+	channel [GPS2_Failure.Faults] -o)- [GPS2.Faults]
+	channel [GPS2.Communication] -o)- [Voter.Sensor2] 
+	channel [Voter_Failure.Faults] -o)- [Voter.Faults]
+	
+}
+
+analysis Reliability {
+in stochastic component system : DualGPS
+mean time of event [system]:Communication->failstop;
+@Configuration{
+	end event [system]:Communication->failstop raised
+	simulation number = 50
+}
+}

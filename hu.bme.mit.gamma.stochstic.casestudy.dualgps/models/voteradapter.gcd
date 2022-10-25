@@ -1,0 +1,18 @@
+package voteradapter
+import "interfaces.gcd"
+import "voter.gcd"
+import "gps.gcd"
+adapter Voterasync of component voter : Voter []{
+	when Faults.any / run
+	when Sensor1.any / run
+	when Sensor2.any / run
+	queue faultQueue (priority=1,capacity=1) {
+		Faults.any
+	}
+	queue s1Queue (priority=2,capacity=1) {
+		Sensor1.any
+	}
+	queue s2Queue (priority=3,capacity=1) {
+		Sensor2.any
+	}
+}

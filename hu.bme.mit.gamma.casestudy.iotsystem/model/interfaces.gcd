@@ -1,0 +1,14 @@
+package interfaces
+
+interface ImageStream {
+	out event newData (blurred:decimal,car:boolean)
+}
+
+interface EventStream{
+	out event newEvent
+}
+
+interface TrafficEventStream{
+	out event carArrives
+	out event carLeaves
+}

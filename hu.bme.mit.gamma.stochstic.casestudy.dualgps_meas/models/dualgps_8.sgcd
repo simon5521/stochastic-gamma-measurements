@@ -1,0 +1,67 @@
+package dualgps
+import "interfaces.gcd"
+import "gpsadapter.gcd"
+import "voteradapter.gcd"
+
+
+stochastic async DualGPS [
+	port Communication : provides Sensor
+]{
+	component Voter : Voterasync
+	bind Communication -> Voter.Communication
+	
+	
+	component GPS1 : GPSasync
+	component GPS2 : GPSasync
+	component GPS3 : GPSasync
+	component GPS4 : GPSasync
+	component GPS5 : GPSasync
+	component GPS6 : GPSasync
+	component GPS7 : GPSasync
+	component GPS8 : GPSasync
+	
+	source GPS1_Failure port Faults : provides HardwareFailure {Faults.* : exponential rate=10.0;}
+	source GPS2_Failure port Faults : provides HardwareFailure {Faults.* : exponential rate=10.0;}
+	source GPS3_Failure port Faults : provides HardwareFailure {Faults.* : exponential rate=10.0;}
+	source GPS4_Failure port Faults : provides HardwareFailure {Faults.* : exponential rate=10.0;}
+	source GPS5_Failure port Faults : provides HardwareFailure {Faults.* : exponential rate=10.0;}
+	source GPS6_Failure port Faults : provides HardwareFailure {Faults.* : exponential rate=10.0;}
+	source GPS7_Failure port Faults : provides HardwareFailure {Faults.* : exponential rate=10.0;}
+	source GPS8_Failure port Faults : provides HardwareFailure {Faults.* : exponential rate=10.0;}
+	
+	channel [GPS1_Failure.Faults] -o)- [GPS1.Faults]
+	channel [GPS2_Failure.Faults] -o)- [GPS2.Faults]
+	channel [GPS3_Failure.Faults] -o)- [GPS3.Faults]
+	channel [GPS4_Failure.Faults] -o)- [GPS4.Faults]
+	channel [GPS5_Failure.Faults] -o)- [GPS5.Faults]
+	channel [GPS6_Failure.Faults] -o)- [GPS6.Faults]
+	channel [GPS7_Failure.Faults] -o)- [GPS7.Faults]
+	channel [GPS8_Failure.Faults] -o)- [GPS8.Faults]
+	
+	channel [GPS1.Communication] -o)- [Voter.Sensor] 
+	channel [GPS2.Communication] -o)- [Voter.Sensor] 
+	channel [GPS3.Communication] -o)- [Voter.Sensor] 
+	channel [GPS4.Communication] -o)- [Voter.Sensor] 
+	channel [GPS5.Communication] -o)- [Voter.Sensor] 
+	channel [GPS6.Communication] -o)- [Voter.Sensor] 
+	channel [GPS7.Communication] -o)- [Voter.Sensor] 
+	channel [GPS8.Communication] -o)- [Voter.Sensor] 
+	
+	
+	source Voter_Failure port Faults : provides HardwareFailure {
+		Faults.* : exponential rate=20.0;
+	}
+	
+	
+	channel [Voter_Failure.Faults] -o)- [Voter.Faults]
+	
+}
+
+analysis Reliability {
+in stochastic component system : DualGPS
+mean time of event [system]:Communication->failstop;
+@Configuration{
+	end event [system]:Communication->failstop raised
+	simulation number = 50
+}
+}

@@ -1,0 +1,23 @@
+package orion_benchmark_system
+import "orion_stoch_env"
+import "interfaces"
+import "summarizer_adapter"
+stochastic async OrionBenchMarkSystem [
+	port SystemConnStatus : provides ConnectionState 
+]
+{
+	component subSystem1_ : Orion_Environment
+	component subSystem2_ : Orion_Environment
+	component summarizer : Summarizer_Adapter
+	channel [subSystem1_.SystemConnStatus] -o)- [summarizer.inPort]
+	channel [subSystem2_.SystemConnStatus] -o)- [summarizer.inPort]
+	bind SystemConnStatus->summarizer.outPort
+}
+
+analysis Orion_Performance {
+	in stochastic component orion : OrionBenchMarkSystem 
+	mean time of event [orion]:SystemConnStatus->conn ;
+	@Configuration{
+		end event [orion]:SystemConnStatus->conn raised
+	}
+} 

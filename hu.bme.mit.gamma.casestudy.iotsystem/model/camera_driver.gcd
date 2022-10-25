@@ -1,0 +1,18 @@
+package camera_driver
+import "interfaces"
+statechart CameraDriver [
+	port Traffic : requires TrafficEventStream
+	port Requests : requires EventStream
+	port Images : provides ImageStream
+]{
+	transition from init to CarIsNotVisible
+	transition from CarIsNotVisible to CarIsVisible when Traffic.carArrives
+	transition from CarIsVisible to CarIsNotVisible when Traffic.carLeaves
+	transition from CarIsVisible to CarIsVisible when Requests.newEvent / raise Images.newData (0.0,true);
+	transition from CarIsNotVisible to CarIsNotVisible when Requests.newEvent / raise Images.newData (0.0,false);
+	region main {
+		initial init
+		state CarIsVisible
+		state CarIsNotVisible 
+	}
+}

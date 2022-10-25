@@ -1,0 +1,60 @@
+//Source: https://github.com/ftsrg/gamma/blob/6a3ce22f527543b521f48cbc28e2842f2eb91af9/examples/hu.bme.mit.gamma.industrial.protocol.casestudy/model/Sync/SystemIdealChannel/OrionSystem.gcd
+package orion_stoch_system
+
+import "Interfaces"
+import "Orion_Master_SM_ext"
+import "Orion_Slave_SM_ext"
+import "Channel"
+import "Status_SM"
+
+stochastic sync OrionStochSystem [
+	
+	port TimoeutKeepAliveReceiveTimeout_3 : requires SoftwareTimer
+	port TimeoutKapcsolodik_2             : requires SoftwareTimer
+	port TimeoutZarva_0                   : requires SoftwareTimer
+	port TimeoutKeepAliveSendTimeout_1    : requires SoftwareTimer
+	//
+	port TimeoutKeepAliveReceiveTimeout_4 : requires SoftwareTimer
+	port TimeoutKapcsolodik_3             : requires SoftwareTimer
+	port TimeoutKeepAliveSendTimeout_0    : requires SoftwareTimer
+	
+	port SystemStatus : provides ConnectionState
+	
+] {
+	component master : Orion_Master_SM_ext
+	component slave : Orion_Slave_SM_ext
+	component connStatus : Status_SM
+	
+	switch masterSlaveChannel port Input : requires StateMachine_Interface_For_Orion -> 
+									port Output : provides StateMachine_Interface_For_Orion,
+									port Lossport : provides StateMachine_Interface_For_Orion{
+										Output.*: 0.9;
+										Lossport.* : 0.1;
+									}
+									
+	switch slaveMasterChannel port Input : requires StateMachine_Interface_For_Orion -> 
+									port Output : provides StateMachine_Interface_For_Orion,
+									port Lossport : provides StateMachine_Interface_For_Orion{
+										Output.*: 0.9;
+										Lossport.* : 0.1;
+									}
+	
+	channel [master.Send_StateMachine_Port] -o)- [masterSlaveChannel.Input]
+	channel [masterSlaveChannel.Output] -o)- [slave.StateMachine_Port]
+	channel [slave.Send_StateMachine_Port] -o)- [slaveMasterChannel.Input]
+	channel [slaveMasterChannel.Output] -o)- [master.StateMachine_Port]
+	channel [master.Status] -o)- [connStatus.masterStatus]
+	channel [slave.Status] -o)- [connStatus.slaveStatus]
+	
+	bind TimoeutKeepAliveReceiveTimeout_3 -> master.TimoeutKeepAliveReceiveTimeout_3 
+	bind TimeoutKapcsolodik_2             -> master.TimeoutKapcsolodik_2             
+	bind TimeoutZarva_0                   -> master.TimeoutZarva_0                   
+	bind TimeoutKeepAliveSendTimeout_1    -> master.TimeoutKeepAliveSendTimeout_1   
+	
+	bind TimeoutKeepAliveReceiveTimeout_4 -> slave.TimeoutKeepAliveReceiveTimeout_4 
+	bind TimeoutKapcsolodik_3             -> slave.TimeoutKapcsolodik_3             
+	bind TimeoutKeepAliveSendTimeout_0    -> slave.TimeoutKeepAliveSendTimeout_0   
+	
+	bind SystemStatus -> connStatus.systemStatus  
+	
+}

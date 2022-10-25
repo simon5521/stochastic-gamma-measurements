@@ -1,0 +1,13 @@
+package summarizer
+import "interfaces"
+statechart Summarizer [
+	port inPort : requires ConnectionState
+	port outPort : provides ConnectionState
+]{
+	transition from init to main
+	transition from main to main when inPort.conn / raise outPort.conn;
+	region main{
+		initial init
+		state main
+	}
+}

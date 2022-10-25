@@ -1,0 +1,8 @@
+package summarizer_adapter
+import "summarizer"
+adapter Summarizer_Adapter of component summarizerComp : Summarizer[]{
+	when inPort.any / run
+	queue inQueue (priority=1,capacity=1){
+		inPort.any
+	}
+}

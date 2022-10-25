@@ -1,0 +1,21 @@
+package voter
+import "interfaces.gcd"
+statechart Voter [
+	
+	port Faults : requires HardwareFailure
+	port Sensor : requires Sensor
+	port Communication : provides Sensor
+]{
+	var sensorfailure : integer:=0
+	transition from init to operation
+	transition from operation to gpschoice when Sensor.failstop
+	transition from gpschoice to failstop [sensorfailure>31] / raise Communication.failstop;
+	transition from gpschoice to operation [else]
+	transition from operation to failstop when Faults.failure / raise Communication.failstop;
+	region main {
+		initial init
+		state operation
+		choice gpschoice
+		state failstop 
+	}
+}

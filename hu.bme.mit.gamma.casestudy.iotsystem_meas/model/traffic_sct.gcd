@@ -1,0 +1,17 @@
+package traffic_sct
+import "interfaces"
+statechart TrafficStatechart [
+	port CarArrives : requires EventStream
+	port CarLeaves : requires EventStream
+	port CarArrivesOut : provides EventStream
+	port TrafficStream : provides TrafficEventStream
+]{
+	transition from init to nocar
+	transition from nocar to car when CarArrives.newEvent / raise TrafficStream.carArrives;  raise CarArrivesOut.newEvent;
+	transition from car to nocar when CarLeaves.newEvent / raise TrafficStream.carLeaves;
+	region main {
+		initial init
+		state car
+		state nocar
+	}
+}

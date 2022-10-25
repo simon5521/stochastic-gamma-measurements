@@ -1,0 +1,8 @@
+package network_adapter
+import "network"
+adapter NetworkAdapter of component network : Network {
+	when ImageIn.any / run
+	when ImageLoss.any / run
+	queue imageInQueue (priority=1,capacity=1){ImageIn.any}
+	queue imageLossQueue (priority=2,capacity=1){ImageLoss.any}
+}

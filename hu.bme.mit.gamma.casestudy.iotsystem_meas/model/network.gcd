@@ -1,0 +1,14 @@
+package network
+import "interfaces"
+statechart Network [
+	port ImageIn : requires ImageStream
+	port ImageOut : provides ImageStream
+	port ImageLoss : requires ImageStream	
+]{
+	transition from init to mainstate
+	transition from mainstate to mainstate when ImageIn.newData/ raise ImageOut.newData(ImageIn.newData::blurred,ImageIn.newData::car);
+	region main{
+		initial init
+		state mainstate
+	}
+}

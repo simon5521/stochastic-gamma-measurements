@@ -1,0 +1,10 @@
+package camera_adapter
+import "camera_software.sgcd"
+import "interfaces"
+adapter CameraAdapter of component cameraSoftware : CameraSoftware [
+	port SoftwareTimer : requires EventStream 
+]{
+	when SoftwareTimer.any / run
+	queue trafficQueue (priority=1,capacity=1){TrafficSensing.any}
+	queue timerQueue (priority=2,capacity=1){SoftwareTimer.any}
+}
